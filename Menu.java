@@ -1,44 +1,37 @@
 public class Menu {
     private MenuItem[] mainDishes;
     private MenuItem[] addOns;
-    private int countMainDish;
-    private int countAddOn;
 
     public Menu(MenuItem[] mainDishes, MenuItem[] addOns){
         this.mainDishes = mainDishes;
         this.addOns = addOns;
-        
-        countMainDish = mainDishes.length;
-        countAddOn = addOns.length;
     }
     
     public void view(){
-        System.out.println("Menu:");
-        for(int i = 0; i < countMainDish; i++){
+        System.out.println("\n---Menu:----");
+        int i = 0;
+        for(; i < mainDishes.length; i++){
             System.out.println(mainDishes[i]);
         }
-        System.out.println("Add Ons:");
-        for(int i = 0; i < countAddOn; i++){
-            System.out.println(addOns[i]);
+        System.out.println("\nAdd Ons:");
+        for(int j = 0; j < addOns.length; j++){
+            System.out.println(addOns[j]);
         }
-        
     }
-    
-    public static void main(String[] args){   
-        MenuItem[] menuItem =  {    
-                new MainDish("C1", 100),
-                new MainDish("C2", 150),
-                new MainDish("C3", 200)
-        };
-        
-        MenuItem[] addOns = {
-                new AddOn("R1", 35),
-                new AddOn("R2", 35)
-        };
 
-        Menu menu = new Menu(menuItem, addOns);
+    public MenuItem getMenuItem(String choice){
+        for(int i = 0; i < mainDishes.length; i++){
+            if(mainDishes[i].getItemName().equals(choice)){
+                return mainDishes[i];
+            }
+        }
 
-        menu.view();
-
+        for(int i = 0; i < addOns.length; i++){
+            if(addOns[i].getItemName().equals(choice)){
+                return addOns[i];
+            }
+        }
+        return null;
     }
+
 }
