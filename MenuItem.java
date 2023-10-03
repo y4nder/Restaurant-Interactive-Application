@@ -2,7 +2,6 @@ abstract class MenuItem{
     protected String itemName;
     protected double itemPrice;
     
-    
     public String getItemName(){
         return itemName;
     }
@@ -11,11 +10,7 @@ abstract class MenuItem{
         return itemPrice;
     }
 
-    public void updateItemPrice(double newPrice){
-        this.itemPrice = newPrice;
-    }
-
     public String toString(){
-        return itemName + " - Php " + itemPrice;
+        return "[" + itemName + "]" + " - Php " + itemPrice;
     }
 }
