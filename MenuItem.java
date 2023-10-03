@@ -3,6 +3,6 @@ abstract class MenuItem{
     protected double itemPrice;
 
     public String toString(){
-        return itemName + " " + itemPrice;
+        return itemName + " - Php " + itemPrice;
     }
 }
