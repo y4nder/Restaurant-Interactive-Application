@@ -162,7 +162,7 @@ public class RestaurantInteractiveApplication {
                     System.out.println("\n-----Restaurant Interactive Application-----");
                     System.out.println("1) Order Food");
                     System.out.println("2) View Orders");
-                    System.out.println("3) Check out");
+                    System.out.println("3) Check out (converted to $)");
                     System.out.println("X) Exit");
             
                     System.out.print("\noption: ");
@@ -210,4 +210,5 @@ public class RestaurantInteractiveApplication {
         }
         while(menuChoice == null);
     } 
+    //code by yander
 }
