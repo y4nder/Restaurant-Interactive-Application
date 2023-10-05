@@ -11,6 +11,6 @@ abstract class MenuItem{
     }
 
     public String toString(){
-        return "[" + itemName + "]" + " - Php " + itemPrice;
+        return "           [" + itemName + "]" + " - Php " + itemPrice;
     }
 }

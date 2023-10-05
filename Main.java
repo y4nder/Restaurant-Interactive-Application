@@ -13,7 +13,7 @@ public class Main {
             System.out.println("\n-----Restaurant Interactive Application-----");
             System.out.println("1) Order Food");
             System.out.println("2) View Orders");
-            System.out.println("3) Check out");
+            System.out.println("3) Check out(converted to dollars)");
             System.out.println("X) Exit");
     
             System.out.print("\noption: ");

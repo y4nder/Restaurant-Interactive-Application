@@ -1,19 +1,19 @@
 public class Menu {
-    private MenuItem[] mainDishes;
-    private MenuItem[] addOns;
+    private MainDish[] mainDishes;
+    private AddOn[] addOns;
 
-    public Menu(MenuItem[] mainDishes, MenuItem[] addOns){
+    public Menu(MainDish[] mainDishes, AddOn[] addOns){
         this.mainDishes = mainDishes;
         this.addOns = addOns;
     }
     
     public void view(){
-        System.out.println("\n---Menu:----");
+        System.out.println("\n        ----------Menu:----------");
         int i = 0;
         for(; i < mainDishes.length; i++){
             System.out.println(mainDishes[i]);
         }
-        System.out.println("\nAdd Ons:");
+        System.out.println("\n          Add Ons:");
         for(int j = 0; j < addOns.length; j++){
             System.out.println(addOns[j]);
         }

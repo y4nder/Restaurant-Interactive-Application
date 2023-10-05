@@ -1,11 +1,11 @@
 public class MyOrders implements ConvertToDollar{
     private OrderedItem[] orderedItems;
     private int orderedItemCount;
-
+    
     public MyOrders(){
         orderedItems = new OrderedItem[50];
         orderedItemCount = 0;
-    }
+            }
 
     public void addToOrder(OrderedItem orderedItem){
         orderedItems[orderedItemCount] = orderedItem;
@@ -13,6 +13,10 @@ public class MyOrders implements ConvertToDollar{
     }
 
     public void showMyOrders(){
+        if(isEmpty()){
+            System.out.println("\nNo orders yet\n");
+            return;
+        }
         System.out.println("\n-----YOUR ORDERS-----");
         for(int i = 0; i < orderedItemCount; i++){
             System.out.println(orderedItems[i]);
@@ -21,9 +25,14 @@ public class MyOrders implements ConvertToDollar{
     }
 
     public void checkOut(){
+        if(isEmpty()){
+            System.out.println("\nNo orders yet\n");
+            return;
+        }
         System.out.println("\nThank you for ordering!!");
         showMyOrders();
         System.out.printf("%s %.2f\n", "Total cost in Dollars: $", pesoToDollar());
+        clearOrders();
     }
     
     @Override
@@ -42,5 +51,9 @@ public class MyOrders implements ConvertToDollar{
     public void clearOrders(){
         this.orderedItems = new OrderedItem[50];
         this.orderedItemCount = 0;
+    }
+
+    private boolean isEmpty(){
+        return orderedItemCount == 0;
     }
 }
